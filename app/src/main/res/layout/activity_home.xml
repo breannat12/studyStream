@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1EDF5"
+    tools:context=".Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/blue_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/blue_border"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/studyapp_logo2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/clubName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Study Stream"
+                    android:textAlignment="center"
+                    android:textColor="#006280"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="vertical"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/calButton"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8BCFE4"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:padding="15dp"
+                    android:text="Calendar"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/timerBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8BCFE4"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:padding="15dp"
+                    android:text="Timer"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/musicBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8BCFE4"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:padding="15dp"
+                    android:text="Study Music"
+                    android:textAllCaps="false"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

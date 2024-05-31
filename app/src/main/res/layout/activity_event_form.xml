@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1EDF5"
+    tools:context=".EventForm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/blue_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/studyapp_logo2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Add Task"
+                android:textColor="#006280"
+                android:textSize="32sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_rect"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titleInput"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:textColorHint="#616161"
+                    app:errorTextColor="#3C3C3C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:hintTextColor="#3E3E3E">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ECF3F6"
+                        android:fontFamily="@font/poppinsregular"
+                        android:hint="Title"
+                        android:textColor="#454545"
+                        android:textColorHint="#616161"
+                        tools:textColor="#333333" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingLeft="5dp"
+                    android:text="Importance:"
+                    android:textColor="#272727"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/descriptionInput"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#616161"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ECF3F6"
+                        android:fontFamily="@font/poppinsregular"
+                        android:hint="Description"
+                        android:textColorHint="#616161" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <CheckBox
+                        android:id="@+id/todayCheck"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="-8dp"
+                        android:layout_weight="1"
+                        android:background="#FE7488"
+                        android:buttonTint="@color/white"
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="5dp"
+                        android:shadowColor="#FFFEFE"
+                        android:text="Due Today!"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="10sp" />
+
+                    <CheckBox
+                        android:id="@+id/tmrCheck"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="-8dp"
+                        android:layout_weight="1"
+                        android:background="#FFB074"
+                        android:buttonTint="@color/white"
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="5dp"
+                        android:shadowColor="#FFFEFE"
+                        android:text="Due Tomorrow"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="10sp" />
+
+                    <CheckBox
+                        android:id="@+id/laterCheck"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="#EDDA5D"
+                        android:buttonTint="@color/white"
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="5dp"
+                        android:shadowColor="#FFFEFE"
+                        android:text="Due Later"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#8BCFE4"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                app:cornerRadius="50dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

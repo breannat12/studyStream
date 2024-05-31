@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="CustomCalendarMonth" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/orange</item>
+    </style>
+
+    <style name="CustomCalendarDay" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="CustomCalendarWeek" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/purple</item>
+    </style>
+    <style name="CurrentDayBackground">
+        <item name="android:background">#8BCFE4</item>
+    </style>
+</selector>
